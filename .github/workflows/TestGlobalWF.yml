@@ -70,7 +70,7 @@ jobs:
           #Only applicable if Application Customization is active and the associated 
           #application is a higher version than the currently installed version
           #Default: false
-          autoUpgradeBaseApp: true
+          #autoUpgradeBaseApp: true
         env:
           snowUsername: ${{ secrets.SN_USERNAME }}
           snowPassword: ${{ secrets.SN_PASSWORD }}
@@ -84,7 +84,7 @@ jobs:
         env:
           snowUsername: ${{ secrets.SN_USERNAME }}
           snowPassword: ${{ secrets.SN_PASSWORD }}
-          nowInstallInstance: ${{ secrets.SN_TEST_INSTANCE }}
+          snowInstallInstance: ${{ secrets.SN_TEST_INSTANCE }}
 
       - name: ServiceNow CI/CD Rollback App
         if: ${{ failure() && steps.install_app.outputs.rollbackVersion }}
