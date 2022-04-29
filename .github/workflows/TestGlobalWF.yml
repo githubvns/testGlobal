@@ -2,10 +2,8 @@ name: ServiceNow GitHub Actions Demo
 
 on:
   pull_request:
-  push:
-    branches:    
+  push:    
      
-     - master
 
 jobs:
   build:
